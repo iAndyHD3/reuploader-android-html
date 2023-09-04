@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+<head>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+	
+		h1 {
+			text-align: center;
+		}
 
-        h1 {
-            text-align: center;
-        }
+		input[type="text"],
+		input[type="number"],
+		input[type="submit"] {
+			width: 80%;
+			padding: 12px 20px;
+			margin: 8px auto;
+			display: block;
+			box-sizing: border-box;
+		}
 
-        input[type="text"],
-        input[type="number"],
-        input[type="submit"] {
-            width: 80%;
-            padding: 12px 20px;
-            margin: 8px auto;
-            display: block;
-            box-sizing: border-box;
-        }
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 14px 20px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
 
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 14px 20px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
 </head>
 <body>
-    <h1>GDPS Editor Reuploader</h1>
-
-    GDPS Username: <br>
-    <input type="text" id="gdps_username" name="gdps_username" size="20" />
-    <br><br>
-
-    GDPS Password: <br>
-    <input type="text" id="gdps_password" name="gdps_password" size="20" />
-    <br><br>
-
-    GD Username: <br>
-    <input type="text" id="gd_username" name="gd_username" size="20" />
-    <br><br>
-
-    GD password: <br>
-    <input type="text" id="gd_password" name="gd_password" size="20" />
-    <br><br>
-
-    Level ID: <br>
-    <input type="number" id="level_id" name="level_id" size="20" />
-    <br><br>
-
-    <input type="submit" id="reupload" name="reupload" value="Reupload"/>
+	<h1>GDPS Editor Reuploader</h1>
+	
+	<div id="reupload_form">
+		GDPS Username: <br>
+		<input type="text" id="gdps_username" name="gdps_username" size="20" />
+		<br><br>
+	
+		GDPS Password: <br>
+		<input type="text" id="gdps_password" name="gdps_password" size="20" />
+		<br><br>
+	
+		GD Username: <br>
+		<input type="text" id="gd_username" name="gd_username" size="20" />
+		<br><br>
+	
+		GD password: <br>
+		<input type="text" id="gd_password" name="gd_password" size="20" />
+		<br><br>
+	
+		Level ID: <br>
+		<input type="number" id="level_id" name="level_id" size="20" />
+		<br><br>
+	
+		<input type="submit" id="reupload" name="reupload" value="Reupload" onclick="Android.onClicked()"/>
+	<div/>
+	
+	<div
 </body>
+
+<script>
+
+	function onReupload() {
+		hideForm();
+		console.log("test")
+	};
+	
+	function hideForm() {
+		document.getElementById('reupload_form').style.display = 'none';
+	};
+
+</script>
+
 </html>
